@@ -26,7 +26,13 @@ const secretCodeWord2 = "Gobbledygook"
 const secretCodeWord3 = "Eccentric"
 // Expected output: "3cc3ntr1c"
 
-
+describe("codedMessage", () => {
+    it("Takes in a string and returns coded message", () => {
+      expect(codedMessage(secretCodeWord1)).toEqual("L4ck4d41s1c4l")
+      expect(codedMessage(secretCodeWord2)).toEqual("G0bbl3dyg00k")
+      expect(codedMessage(secretCodeWord3)).toEqual("3cc3ntr1c")
+    })
+  })
 
 //   FAIL  ./code-challenges.test.js
 //   codedMessage
@@ -176,7 +182,7 @@ const fullHouseChecker = (array) => {
         countHolder[key] += 1;
     }
 
-    return (Object.values(countHolder).includes(2) && 
+    return (Object.values(countHolder).includes(2) &&
         Object.values(countHolder).includes(3))
 }
 
